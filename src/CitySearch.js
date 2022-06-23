@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
-import { mockData } from './mock-data';
-import { extractLocations } from './api';
 
 class CitySearch extends Component {
   state = {
     query: '',
-    sugguestions: []
+    suggestions: []
   }
 
   handleInputChanged = (event) => {
@@ -19,6 +17,12 @@ class CitySearch extends Component {
     });
   };
 
+  handleItemClicked = (suggestion) => {
+    this.setState({
+      query: suggestion
+    });
+  }
+
   render() {
     return (
       <div className="CitySearch">
@@ -29,10 +33,13 @@ class CitySearch extends Component {
           onChange={this.handleInputChanged}
         />
         <ul className="suggestions">
-          {this.state.suggestions.map((suggestion) => (
-            <li key={suggestion}>{suggestion}</li>
-          ))}
-          <li key='all'>
+        {this.state.suggestions.map((suggestion) => (
+          <li
+            key={suggestion}
+            onClick={() => this.handleItemClicked(suggestion)}
+          >{suggestion}</li>
+        ))}
+          <li>
             <b>See all cities</b>
           </li>
         </ul>
