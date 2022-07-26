@@ -22,10 +22,10 @@ class Event extends Component {
     return (
       <div className="event">
         <h2 className="event-name">{event.summary}</h2>
-        <p className="event-date">Date: {this.dateFormat(event.start.dateTime)}</p>
-        <p className="event-location">Location: {event.location}</p>
+        <p className="event-date"><b>Date:</b> {this.dateFormat(event.start.dateTime)}</p>
+        <p className="event-location"><b>Location:</b> {event.location}</p>
         {!this.state.collapsed && (
-          <p className="event-description">Description: {event.description}</p>
+          <p className="event-description"><b>Description:</b> {event.description}</p>
         )}
         <button className="event-button" onClick={this.handleClick}>Details</button>
       </div>
