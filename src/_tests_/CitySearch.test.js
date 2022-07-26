@@ -63,6 +63,7 @@ describe('<CitySearch /> component', () => {
     expect(CitySearchWrapper.state('query')).toBe(suggestions[0]);
   });
 
+  //Task 4.4
   test("selecting CitySearch input reveals the suggestions list", () => {
     CitySearchWrapper.find('.city').simulate('focus');
     expect(CitySearchWrapper.state('showSuggestions')).toBe(true);
