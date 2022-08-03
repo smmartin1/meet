@@ -30,7 +30,7 @@ defineFeature(feature, test => {
 
     when('user visits the page', () => {
       AppWrapper.update();
-      AppWrapper.find('.events').simulate('change', { target: { value: 5 } });
+      AppWrapper.find('.events').simulate('change', { target: 5 });
     });
 
     then('the number of events user wants to see is displayed', () => {
