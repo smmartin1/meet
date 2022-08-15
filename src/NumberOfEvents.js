@@ -12,8 +12,6 @@ class NumberOfEvents extends Component {
       this.setState({
         infoText: 'Enter a number between 1 and 32'
       });
-
-      console.log('Enter a number between 1 and 32');
     } else {
       this.props.updateEvents(undefined, value);
       this.setState({
