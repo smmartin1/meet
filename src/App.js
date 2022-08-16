@@ -4,6 +4,7 @@ import './nprogress.css';
 import EventList from './EventList';
 import CitySearch from './CitySearch';
 import NumberOfEvents from './NumberOfEvents';
+import { OfflineAlert } from './Alert';
 import { getEvents, extractLocations } from './api';
 
 class App extends Component {
@@ -13,7 +14,8 @@ class App extends Component {
       events: [],
       locations: [],
       numberOfEvents: 32,
-      selectedLocation: 'all'
+      selectedLocation: 'all',
+      offlineText: ''
     }
   }
 
@@ -25,6 +27,14 @@ class App extends Component {
       }
     });
   }
+
+  /*
+  if (!navigator.onLine) {
+    this.setState({
+      offlineText: 'You are currently offline. Events are loaded through cache.'
+    });
+  }
+  */
 
   componentWillUnmount(){
     this.mounted = false;
@@ -56,6 +66,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        {!navigator.onLine && <OfflineAlert text={"You are currently offline. Events are loaded through cache."} />}
         <h1>Meet</h1>
         <CitySearch
           locations={this.state.locations}
