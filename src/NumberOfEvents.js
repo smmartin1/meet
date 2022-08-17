@@ -26,7 +26,7 @@ class NumberOfEvents extends Component {
         <label>Number of Events</label>
         <input
           type="number"
-          className="events"
+          className="number-events"
           value={this.props.numberOfEvents}
           onChange={this.handleInputChanged}
         />
