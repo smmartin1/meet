@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:500);
 
-body{background-color: #AED68B;}
+body{background-color: #E0FCF0;}
 
 .App {
   text-align: center;
@@ -18,7 +18,7 @@ ul {
   list-style: none;
 }
 
-li{background-color: #99BD7B;}
+li{background-color: #C1E6E0;}
 
 p {
   margin: 5px 0;
@@ -27,7 +27,7 @@ p {
 button{
   margin-top: 10px;
   padding: 10px;
-  background-color: #7A9662;
+  background-color: #6F7D77;
   color: #FFFFFF;
   font-size: 14px;
 }
@@ -160,6 +160,7 @@ label {
 
 .Alert {
   top: 20px;
+  font-weight: 500;
 }
 
 .data-vis-wrapper {
