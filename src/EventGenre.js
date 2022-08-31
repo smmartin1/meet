@@ -17,7 +17,7 @@ const EventGenre = ({ events }) => {
       const value = events.filter((event) => event.summary.split(" ").includes(genre)).length;
       return { name: genre, value };
     });
-
+    
     return data;
   };
 
