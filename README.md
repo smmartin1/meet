@@ -1,5 +1,5 @@
 # meet
-An app where users can find events happening in their cities. This app uses React and Test-Driven Development.
+An app where users can find events happening around the world. This app uses React and Test-Driven Development.
 
 SHOW/HIDE AN EVENT'S DETAILS
   As a user, I should be able to view details of a certain event and hide details when looking for a different event.
