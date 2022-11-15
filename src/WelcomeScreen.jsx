@@ -8,7 +8,7 @@ function WelcomeScreen(props) {
         <h1>Welcome to the Meet App</h1>
         <h4>Log in to view upcoming global events for full-stack developers</h4>
 
-        <div className="button_count" align="center">
+        <div className="button_cont" align="center">
           <div className="google-btn">
             <div className="google-icon-wrapper">
               <img
